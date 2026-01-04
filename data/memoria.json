@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "categoria": "set_index",
+    "area": "Análise de Dados, Pandas",
+    "contexto": "Limpeza e preparação de dados para relatórios",
+    "referencia": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html",
+    "nivel_dificuldade": "Intermediário",
+    "titulo": "Como usar set_index para reorganizar o DataFrame",
+    "tags": ["pandas", "index", "set_index", "dataframe", "limpeza_dados"],
+    "descricao": "O método set_index é usado para definir uma ou mais colunas como índice do DataFrame.",
+    "exemplos": {
+      "exemplo_a": "df = pd.DataFrame({\n  \"cliente\": [\"Ana\", \"Bruno\", \"Carlos\"],\n  \"vendas\": [100, 200, 150]\n})\n\ndf = df.set_index(\"cliente\")\nprint(df)",
+      "exemplo_b": "df = df.set_index(\"cliente\", drop=False)\nprint(df)"
+    },
+    "explicacao_pessoal": "Uso quando trato uma coluna como identidade da linha. Se fico filtrando por ela toda hora, deveria virar índice.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:00:00",
+    "updated_at": "2026-01-04T12:00:00"
+  },
+
+  {
+    "id": 2,
+    "categoria": "pandas",
+    "area": "Análise de Dados, Pandas",
+    "contexto": "Análise agregada",
+    "referencia": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html",
+    "nivel_dificuldade": "Intermediário",
+    "titulo": "Groupby para agregações simples",
+    "tags": ["pandas", "groupby", "agregacao"],
+    "descricao": "groupby permite agrupar dados por uma ou mais colunas para realizar agregações.",
+    "exemplos": {
+      "exemplo_a": "df.groupby(\"categoria\")[\"valor\"].sum()",
+      "exemplo_b": "df.groupby([\"ano\", \"mes\"]).mean()"
+    },
+    "explicacao_pessoal": "Sempre penso no groupby como um SQL GROUP BY mental.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:01:00",
+    "updated_at": "2026-01-04T12:01:00"
+  },
+
+  {
+    "id": 3,
+    "categoria": "pandas",
+    "area": "Análise de Dados, Pandas",
+    "contexto": "Limpeza de dados",
+    "referencia": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html",
+    "nivel_dificuldade": "Intermediário",
+    "titulo": "Merge para juntar DataFrames",
+    "tags": ["pandas", "merge", "join"],
+    "descricao": "merge combina DataFrames de forma semelhante a JOIN no SQL.",
+    "exemplos": {
+      "exemplo_a": "pd.merge(df1, df2, on=\"id\")",
+      "exemplo_b": "pd.merge(df1, df2, how=\"left\", on=\"id\")"
+    },
+    "explicacao_pessoal": "Sempre verifico duplicidade antes do merge para evitar explosão de linhas.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:02:00",
+    "updated_at": "2026-01-04T12:02:00"
+  },
+
+  {
+    "id": 4,
+    "categoria": "pandas",
+    "area": "Análise de Dados, Pandas",
+    "contexto": "Preparação de dados",
+    "referencia": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "Tratamento de valores nulos com fillna",
+    "tags": ["pandas", "fillna", "null"],
+    "descricao": "fillna substitui valores nulos por um valor definido.",
+    "exemplos": {
+      "exemplo_a": "df.fillna(0)",
+      "exemplo_b": "df[\"coluna\"].fillna(df[\"coluna\"].mean())"
+    },
+    "explicacao_pessoal": "Cuidado para não mascarar dados ruins preenchendo tudo com zero.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:03:00",
+    "updated_at": "2026-01-04T12:03:00"
+  },
+
+  {
+    "id": 5,
+    "categoria": "pandas",
+    "area": "Análise de Dados, Pandas",
+    "contexto": "Seleção de dados",
+    "referencia": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "Uso de loc para seleção",
+    "tags": ["pandas", "loc", "filtro"],
+    "descricao": "loc é usado para seleção baseada em rótulos.",
+    "exemplos": {
+      "exemplo_a": "df.loc[df[\"valor\"] > 100]",
+      "exemplo_b": "df.loc[:, [\"col1\", \"col2\"]]"
+    },
+    "explicacao_pessoal": "Prefiro loc a filtros diretos para manter legibilidade.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:04:00",
+    "updated_at": "2026-01-04T12:04:00"
+  },
+
+  {
+    "id": 6,
+    "categoria": "python",
+    "area": "Python Básico",
+    "contexto": "Controle de fluxo",
+    "referencia": "https://docs.python.org/3/tutorial/controlflow.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "Laço for para percorrer listas",
+    "tags": ["python", "for", "loop"],
+    "descricao": "O for percorre sequências como listas e tuplas.",
+    "exemplos": {
+      "exemplo_a": "for n in numeros:\n    print(n)",
+      "exemplo_b": "for i in range(5):\n    print(i)"
+    },
+    "explicacao_pessoal": "Uso sempre que sei o tamanho da iteração.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:05:00",
+    "updated_at": "2026-01-04T12:05:00"
+  },
+
+  {
+    "id": 7,
+    "categoria": "python",
+    "area": "Python Básico",
+    "contexto": "Controle de fluxo",
+    "referencia": "https://docs.python.org/3/tutorial/controlflow.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "While para repetição condicional",
+    "tags": ["python", "while", "loop"],
+    "descricao": "while executa enquanto a condição for verdadeira.",
+    "exemplos": {
+      "exemplo_a": "while x < 5:\n    x += 1",
+      "exemplo_b": "while True:\n    break"
+    },
+    "explicacao_pessoal": "Uso com cuidado para não criar loop infinito.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:06:00",
+    "updated_at": "2026-01-04T12:06:00"
+  },
+
+  {
+    "id": 8,
+    "categoria": "python",
+    "area": "Python Básico",
+    "contexto": "Estruturas",
+    "referencia": "https://docs.python.org/3/tutorial/datastructures.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "Iterando dicionários",
+    "tags": ["python", "dict", "for"],
+    "descricao": "Dicionários podem ser iterados por chave e valor.",
+    "exemplos": {
+      "exemplo_a": "for k, v in dados.items():\n    print(k, v)",
+      "exemplo_b": "for k in dados.keys():\n    print(k)"
+    },
+    "explicacao_pessoal": "Uso items quando preciso dos dois.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:07:00",
+    "updated_at": "2026-01-04T12:07:00"
+  },
+
+  {
+    "id": 9,
+    "categoria": "python",
+    "area": "Python Básico",
+    "contexto": "Lógica",
+    "referencia": "https://docs.python.org/3/tutorial/controlflow.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "Uso de break e continue",
+    "tags": ["python", "break", "continue"],
+    "descricao": "Controla o fluxo dentro de loops.",
+    "exemplos": {
+      "exemplo_a": "for i in range(10):\n    if i == 5:\n        break",
+      "exemplo_b": "for i in range(10):\n    if i % 2 == 0:\n        continue"
+    },
+    "explicacao_pessoal": "Ajuda a evitar estruturas condicionais grandes.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:08:00",
+    "updated_at": "2026-01-04T12:08:00"
+  },
+
+  {
+    "id": 10,
+    "categoria": "python",
+    "area": "Python Básico",
+    "contexto": "Estruturas",
+    "referencia": "https://docs.python.org/3/tutorial/datastructures.html",
+    "nivel_dificuldade": "Básico",
+    "titulo": "List comprehension",
+    "tags": ["python", "list_comprehension"],
+    "descricao": "Forma concisa de criar listas.",
+    "exemplos": {
+      "exemplo_a": "[x for x in range(10)]",
+      "exemplo_b": "[x for x in range(10) if x % 2 == 0]"
+    },
+    "explicacao_pessoal": "Uso quando não compromete a legibilidade.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:09:00",
+    "updated_at": "2026-01-04T12:09:00"
+  },
+
+  {
+    "id": 11,
+    "categoria": "excel",
+    "area": "Excel Básico",
+    "contexto": "Análise simples",
+    "referencia": "https://support.microsoft.com/",
+    "nivel_dificuldade": "Básico",
+    "titulo": "SOMA",
+    "tags": ["excel", "soma"],
+    "descricao": "Soma valores em um intervalo.",
+    "exemplos": {
+      "exemplo_a": "=SOMA(A1:A10)",
+      "exemplo_b": "=SOMA(A1;A3;A5)"
+    },
+    "explicacao_pessoal": "Função base para qualquer planilha.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:10:00",
+    "updated_at": "2026-01-04T12:10:00"
+  },
+
+  {
+    "id": 12,
+    "categoria": "excel",
+    "area": "Excel Básico",
+    "contexto": "Lógica",
+    "referencia": "https://support.microsoft.com/",
+    "nivel_dificuldade": "Básico",
+    "titulo": "SE",
+    "tags": ["excel", "se", "logica"],
+    "descricao": "Avalia uma condição lógica.",
+    "exemplos": {
+      "exemplo_a": "=SE(A1>10;\"Sim\";\"Não\")",
+      "exemplo_b": "=SE(B2=\"\";0;B2)"
+    },
+    "explicacao_pessoal": "Uso muito para tratar exceções simples.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:11:00",
+    "updated_at": "2026-01-04T12:11:00"
+  },
+
+  {
+    "id": 13,
+    "categoria": "excel",
+    "area": "Excel Básico",
+    "contexto": "Busca",
+    "referencia": "https://support.microsoft.com/",
+    "nivel_dificuldade": "Intermediário",
+    "titulo": "PROCX",
+    "tags": ["excel", "procx", "busca"],
+    "descricao": "Busca valores em tabelas.",
+    "exemplos": {
+      "exemplo_a": "=PROCX(A1;A:A;B:B)",
+      "exemplo_b": "=PROCX(A1;A:A;B:B;\"Não encontrado\")"
+    },
+    "explicacao_pessoal": "Substitui PROCV com muito mais segurança.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:12:00",
+    "updated_at": "2026-01-04T12:12:00"
+  },
+
+  {
+    "id": 14,
+    "categoria": "excel",
+    "area": "Excel Básico",
+    "contexto": "Contagem",
+    "referencia": "https://support.microsoft.com/",
+    "nivel_dificuldade": "Básico",
+    "titulo": "CONT.SE",
+    "tags": ["excel", "contse"],
+    "descricao": "Conta valores que atendem a critérios.",
+    "exemplos": {
+      "exemplo_a": "=CONT.SE(A:A;\"OK\")",
+      "exemplo_b": "=CONT.SE(B:B;\">10\")"
+    },
+    "explicacao_pessoal": "Uso para validação rápida.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:13:00",
+    "updated_at": "2026-01-04T12:13:00"
+  },
+
+  {
+    "id": 15,
+    "categoria": "excel",
+    "area": "Excel Básico",
+    "contexto": "Texto",
+    "referencia": "https://support.microsoft.com/",
+    "nivel_dificuldade": "Básico",
+    "titulo": "CONCAT",
+    "tags": ["excel", "concat"],
+    "descricao": "Concatena textos.",
+    "exemplos": {
+      "exemplo_a": "=CONCAT(A1;\" \";B1)",
+      "exemplo_b": "=CONCAT(A1;B1;C1)"
+    },
+    "explicacao_pessoal": "Facilita junção de campos.",
+    "status": "estudo",
+    "created_at": "2026-01-04T12:14:00",
+    "updated_at": "2026-01-04T12:14:00"
+  }
+]

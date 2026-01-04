@@ -1,0 +1,66 @@
+===============================
+MODELO DE PREENCHIMENTO – RECALL
+===============================
+
+METADADOS
+
+Categoria*:
+set_index
+
+Área / Domínio:
+Análise de Dados / Pandas
+
+Projeto / Contexto:
+Limpeza e preparação de dados para relatórios
+
+Referência / Fonte:
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html
+
+Nível de Dificuldade:
+(X) Intermediário
+
+
+CONTEÚDO
+
+Título:
+Como usar set_index para reorganizar o DataFrame
+
+Tags:
+pandas, index, set_index, dataframe, limpeza_dados
+
+Descrição:
+O método set_index é usado para definir uma ou mais colunas
+como índice do DataFrame. É útil quando uma coluna representa
+a identidade da linha ou quando preciso preparar dados para
+joins, groupby ou análises temporais.
+
+
+EXEMPLOS
+
+Exemplo A:
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "cliente": ["Ana", "Bruno", "Carlos"],
+    "vendas": [100, 200, 150]
+})
+
+df = df.set_index("cliente")
+print(df)
+
+
+Exemplo B:
+
+df = df.set_index("cliente", drop=False)
+print(df)
+
+
+EXPLICAÇÃO DO MEU JEITO
+
+Eu uso set_index quando percebo que estou tratando uma coluna
+como identidade da linha. Se fico filtrando df[df["cliente"] == "Ana"]
+toda hora, provavelmente essa coluna deveria ser índice.
+
+Sempre prestar atenção no drop=True (padrão), porque já perdi
+coluna sem perceber. Se for importante, prefiro drop=False.
